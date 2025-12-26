@@ -1,10 +1,12 @@
 <script lang="ts">
     import { onMount } from 'svelte';
+    import { slide } from 'svelte/transition';
     import logo from '$lib/assets/logo.png';
     import { personalInfo } from '$lib/data';
     import Icon from '@iconify/svelte';
 
     let isScrolled = false;
+    let isMenuOpen = false;
 
     onMount(() => {
         const handleScroll = () => {
@@ -13,6 +15,10 @@
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     });
+
+    const toggleMenu = () => {
+        isMenuOpen = !isMenuOpen;
+    };
 
     const links = [
         { name: 'Home', href: '#home' },
@@ -47,5 +53,25 @@
                 </a>
             </div>
         </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-gray-600 hover:text-pink-600 focus:outline-none p-2" onclick={toggleMenu} aria-label="Toggle menu">
+            {#if isMenuOpen}
+                <Icon icon="mdi:close" width="24" height="24" />
+            {:else}
+                <Icon icon="mdi:menu" width="24" height="24" />
+            {/if}
+        </button>
     </div>
+
+    <!-- Mobile Menu Overlay -->
+    {#if isMenuOpen}
+        <div class="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md shadow-lg border-t border-gray-100 py-4 px-6 flex flex-col space-y-4" transition:slide={{ duration: 300 }}>
+            {#each links as link}
+                <a href={link.href} class="text-gray-600 hover:text-pink-600 font-medium text-sm uppercase tracking-wide block py-2" onclick={() => isMenuOpen = false}>
+                    {link.name}
+                </a>
+            {/each}
+        </div>
+    {/if}
 </nav>

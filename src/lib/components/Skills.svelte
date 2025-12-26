@@ -37,7 +37,7 @@
                 <div class="group relative">
                     <div class="absolute -inset-0.5 bg-linear-to-r from-pink-300 to-red-300 rounded-xl blur opacity-25 group-hover:opacity-75 transition duration-200"></div>
                     <div class="relative px-6 py-4 bg-linear-to-br from-white to-pink-50 rounded-xl leading-none flex items-center gap-3 hover:shadow-sm transition-all border border-pink-100">
-                        <div class="text-2xl grayscale group-hover:grayscale-0 transition-all duration-300">
+                        <div class="text-2xl md:grayscale group-hover:grayscale-0 transition-all duration-300">
                             <Icon icon={getIcon(skill)} />
                         </div>
                         <span class="text-gray-700 font-medium group-hover:text-pink-600 transition-colors">{skill}</span>

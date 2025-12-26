@@ -1,6 +1,17 @@
 <script lang="ts">
     import { projects } from '$lib/data';
     import AnimalDecoration from './AnimalDecoration.svelte';
+    import { onMount } from 'svelte';
+
+    let showSecondary = false;
+
+    onMount(() => {
+        const interval = setInterval(() => {
+            showSecondary = !showSecondary;
+        }, 5000);
+
+        return () => clearInterval(interval);
+    });
 </script>
 
 <section id="projects" class="py-24 bg-white relative">
@@ -22,7 +33,7 @@
                         <img 
                             src={project.images[0]} 
                             alt={project.title} 
-                            class="absolute inset-0 w-full h-full object-contain object-center transition-opacity duration-500 ease-in-out {project.images[1] ? 'group-hover:opacity-0' : ''}"
+                            class="absolute inset-0 w-full h-full object-contain object-center transition-opacity duration-500 ease-in-out {project.images[1] ? 'group-hover:opacity-0' : ''} {showSecondary && project.images[1] ? 'opacity-0' : ''}"
                         />
                         
                         <!-- Secondary Image (on hover) -->
@@ -30,7 +41,7 @@
                             <img 
                                 src={project.images[1]} 
                                 alt="{project.title} alternate view" 
-                                class="absolute inset-0 w-full h-full object-contain object-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"
+                                class="absolute inset-0 w-full h-full object-contain object-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out {showSecondary ? 'opacity-100' : ''}"
                             />
                         {/if}
                         
@@ -39,7 +50,7 @@
 
                     <!-- Content Section -->
                     <div class="p-8 md:p-12 space-y-6">
-                        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                        <div class="flex flex-col items-start md:flex-row md:items-start md:justify-between gap-4">
                             <div>
                                 <h4 class="text-3xl font-bold text-gray-900 font-serif mb-2">{project.title}</h4>
                                 <p class="text-pink-600 font-medium text-lg">{project.role}</p>
