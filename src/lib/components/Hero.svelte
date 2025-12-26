@@ -1,6 +1,19 @@
 <script lang="ts">
     import { personalInfo } from '$lib/data';
     import AnimalDecoration from './AnimalDecoration.svelte';
+    import { TypeWriter } from 'svelte-typewrite';
+
+    const typewriterTexts = [
+        "I'm Mark Jaily Peña",
+        "I'm a Developer",
+        "I'm an AWS Certified",
+        "I'm into Cybersec",
+        "I Turn Ideas into Reality",
+        "I Build Scalable Apps",
+        "I'm a Cat Lover",
+        "I'm a Casual Gamer",
+        "I'm an Avid Learner"
+    ];
 </script>
 
 <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-pink-50/30 py-32">
@@ -16,16 +29,13 @@
     <div class="container mx-auto px-8 md:px-16 lg:px-24 relative z-10 flex flex-col-reverse md:flex-row items-center gap-12 md:gap-20">
         <div class="flex-1 text-center md:text-left relative">
             <h2 class="text-pink-600 font-medium tracking-widest mb-4 uppercase animate-fade-in-up">Portfolio</h2>
-            <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6 font-serif leading-tight">
-                Hi, I'm <br/>
+            <h1 class="text-4xl md:text-7xl font-bold text-gray-900 mb-8 font-serif leading-tight min-h-[100px] md:min-h-[190px]">
+                Hi! 
                 <span class="text-transparent bg-clip-text bg-linear-to-r from-pink-600 to-red-500">
-                    {personalInfo.name}
+                    <TypeWriter texts={typewriterTexts} />
                 </span>
             </h1>
-            <p class="text-xl md:text-2xl text-gray-600 mb-8 font-light">
-                {personalInfo.role}
-            </p>
-            <p class="text-gray-600 mb-10 max-w-lg mx-auto md:mx-0 leading-relaxed">
+            <p class="text-gray-600 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed">
                 {personalInfo.description}
             </p>
             

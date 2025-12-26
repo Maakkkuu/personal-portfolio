@@ -21,7 +21,6 @@ import awsugLogo from '$lib/assets/awsug_logo.jpg';
 
 export const personalInfo = {
     name: "Mark Jaily Peña",
-    role: "Developer | Cloud | Cybersecurity",
     description: "A passionate developer with a curious mind and a love for learning new technologies. I am driven to create business-centric solutions and innovations, constantly seeking to enhance my skills and contribute to impactful projects.",
     email: "markjaily09@gmail.com",
     location: "Davao City",
