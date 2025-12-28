@@ -4,17 +4,30 @@
     import { onMount } from 'svelte';
 
     let showSecondary = false;
+    let isMobile = false;
 
     onMount(() => {
+        const checkMobile = () => {
+            isMobile = window.innerWidth < 768;
+        };
+        
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        
         const interval = setInterval(() => {
-            showSecondary = !showSecondary;
+            if (isMobile) {
+                showSecondary = !showSecondary;
+            }
         }, 5000);
 
-        return () => clearInterval(interval);
+        return () => {
+            clearInterval(interval);
+            window.removeEventListener('resize', checkMobile);
+        };
     });
 </script>
 
-<section id="projects" class="py-24 bg-white relative">
+<section id="projects" class="py-24 bg-pink-50/30 relative">
     <div class="container mx-auto px-6">
         <div class="text-center mb-16">
             <h2 class="text-pink-600 font-medium tracking-widest mb-2 uppercase">My Work</h2>
@@ -33,7 +46,7 @@
                         <img 
                             src={project.images[0]} 
                             alt={project.title} 
-                            class="absolute inset-0 w-full h-full object-contain object-center transition-opacity duration-500 ease-in-out {project.images[1] ? 'group-hover:opacity-0' : ''} {showSecondary && project.images[1] ? 'opacity-0' : ''}"
+                            class="absolute inset-0 w-full h-full object-contain object-center transition-opacity duration-500 ease-in-out {project.images[1] ? 'group-hover:opacity-0' : ''} {isMobile && showSecondary && project.images[1] ? 'opacity-0' : ''}"
                         />
                         
                         <!-- Secondary Image (on hover) -->
@@ -41,7 +54,7 @@
                             <img 
                                 src={project.images[1]} 
                                 alt="{project.title} alternate view" 
-                                class="absolute inset-0 w-full h-full object-contain object-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out {showSecondary ? 'opacity-100' : ''}"
+                                class="absolute inset-0 w-full h-full object-contain object-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out {isMobile && showSecondary ? 'opacity-100' : ''}"
                             />
                         {/if}
                         
