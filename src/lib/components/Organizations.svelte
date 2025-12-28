@@ -7,7 +7,7 @@
     <div class="container mx-auto px-6">
         <div class="text-center mb-16">
             <h2 class="text-pink-600 font-medium tracking-widest mb-2 uppercase">Community</h2>
-            <h3 class="text-4xl font-bold text-gray-900 font-serif">Organizations</h3>
+            <h3 class="text-4xl font-bold text-gray-900 font-display">Organizations</h3>
             <div class="w-24 h-1 bg-pink-300 mx-auto mt-4 rounded-full"></div>
             <p class="mt-8 max-w-2xl mx-auto text-gray-600 leading-relaxed">
                 Since 2023, my path in computer science has been defined by a deep curiosity for technology and a search for new challenges. My experiences with SPARCS and various organizations have shaped who I am today.
@@ -26,7 +26,7 @@
 
                     <!-- Content Column -->
                     <div class="flex-1 text-center md:text-left w-full">
-                        <h4 class="text-2xl font-bold text-gray-900 font-serif mb-6 leading-tight">{org.name}</h4>
+                        <h4 class="text-2xl font-bold text-gray-900 font-display mb-6 leading-tight">{org.name}</h4>
                         
                         <!-- Roles Timeline -->
                         <div class="space-y-6 relative pl-4 md:pl-2">

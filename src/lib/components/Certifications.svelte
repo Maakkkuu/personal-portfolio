@@ -7,7 +7,7 @@
     <div class="container mx-auto px-6">
         <div class="text-center mb-16">
             <h2 class="text-pink-600 font-medium tracking-widest mb-2 uppercase">Achievements</h2>
-            <h3 class="text-4xl font-bold text-gray-900 font-serif">Certifications & Badges</h3>
+            <h3 class="text-4xl font-bold text-gray-900 font-display">Certifications & Badges</h3>
             <div class="w-24 h-1 bg-pink-300 mx-auto mt-4 rounded-full"></div>
         </div>
 

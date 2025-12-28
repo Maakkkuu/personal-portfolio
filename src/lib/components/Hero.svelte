@@ -29,7 +29,7 @@
     <div class="container mx-auto px-8 md:px-16 lg:px-24 relative z-10 flex flex-col-reverse md:flex-row items-center gap-12 md:gap-20">
         <div class="flex-1 text-center md:text-left relative">
             <h2 class="text-pink-600 font-medium tracking-widest mb-4 uppercase animate-fade-in-up">Portfolio</h2>
-            <h1 class="text-4xl md:text-7xl font-bold text-gray-900 mb-8 font-serif leading-tight min-h-25 md:min-h-47.5">
+            <h1 class="text-4xl md:text-7xl font-bold text-gray-900 mb-8 font-display leading-tight min-h-25 md:min-h-47.5">
                 Hi! 
                 <span class="text-transparent bg-clip-text bg-linear-to-r from-pink-600 to-red-500">
                     <TypeWriter texts={typewriterTexts} />

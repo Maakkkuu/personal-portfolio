@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { slide } from 'svelte/transition';
-    import logo from '$lib/assets/logo.png';
+    import logo from '$lib/assets/img/logo.png';
     import { personalInfo } from '$lib/data';
     import Icon from '@iconify/svelte';
 

@@ -1,23 +1,23 @@
-import profilePic from '$lib/assets/profile_picture.jpg';
-import awscc1 from '$lib/assets/awsccupmindanao_website_1.png';
-import awscc2 from '$lib/assets/awsccupmindanao_website_2.png';
-import crams1 from '$lib/assets/crams_1.png';
-import crams2 from '$lib/assets/crams_2.png';
-import dorm1 from '$lib/assets/upmin_dormitory_system_1.png';
-import dorm2 from '$lib/assets/upmin_dormitory_system_2.png';
-import durian1 from '$lib/assets/durianpy_website_1.png';
-import durian2 from '$lib/assets/durianpy_website_2.png';
-import cafe1 from '$lib/assets/cafecraze_1.png';
-import cafe2 from '$lib/assets/cafecraze_2.png';
+import profilePic from '$lib/assets/img/profile_picture.jpg';
+import awscc1 from '$lib/assets/img/awsccupmindanao_website_1.png';
+import awscc2 from '$lib/assets/img/awsccupmindanao_website_2.png';
+import crams1 from '$lib/assets/img/crams_1.png';
+import crams2 from '$lib/assets/img/crams_2.png';
+import dorm1 from '$lib/assets/img/upmin_dormitory_system_1.png';
+import dorm2 from '$lib/assets/img/upmin_dormitory_system_2.png';
+import durian1 from '$lib/assets/img/durianpy_website_1.png';
+import durian2 from '$lib/assets/img/durianpy_website_2.png';
+import cafe1 from '$lib/assets/img/cafecraze_1.png';
+import cafe2 from '$lib/assets/img/cafecraze_2.png';
 
-import awsCcp from '$lib/assets/aws_ccp.png';
-import thm from '$lib/assets/advent_of_cyber.svg';
-import awsMl from '$lib/assets/aws_educate_machine_learning_foundations.png';
-import awsEss from '$lib/assets/aws_knowledge_cloud_essentials.png';
+import awsCcp from '$lib/assets/img/aws_ccp.png';
+import thm from '$lib/assets/img/advent_of_cyber.svg';
+import awsMl from '$lib/assets/img/aws_educate_machine_learning_foundations.png';
+import awsEss from '$lib/assets/img/aws_knowledge_cloud_essentials.png';
 
-import sparcsLogo from '$lib/assets/sparcs_logo.jpg';
-import awsccLogo from '$lib/assets/awscc-upmin-logo.png';
-import awsugLogo from '$lib/assets/awsug_logo.jpg';
+import sparcsLogo from '$lib/assets/img/sparcs_logo.jpg';
+import awsccLogo from '$lib/assets/img/awscc-upmin-logo.png';
+import awsugLogo from '$lib/assets/img/awsug_logo.jpg';
 
 export const personalInfo = {
     name: "Mark Jaily Peña",

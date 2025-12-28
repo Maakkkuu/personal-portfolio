@@ -2,14 +2,14 @@
     import { personalInfo } from '$lib/data';
 </script>
 
-<footer class="bg-white border-t border-gray-100 py-12">
-    <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+<footer class="bg-white border-t border-gray-100 py-8">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
         <div class="text-center md:text-left">
-            <h3 class="text-xl font-bold text-gray-900 font-serif">Makku.</h3>
+            <h3 class="text-xl font-bold text-gray-900 font-display">Makku.</h3>
             <p class="text-gray-500 text-sm mt-1">Building digital experiences with heart.</p>
         </div>
 
-        <div class="flex flex-col items-center md:items-end md:mt-12">
+        <div class="flex flex-col items-center md:items-end">
             <p class="text-gray-400 text-sm">
                 &copy; 2025 {personalInfo.name}. All rights reserved.
             </p>

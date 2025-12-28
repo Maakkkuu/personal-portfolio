@@ -31,7 +31,7 @@
     <div class="container mx-auto px-6">
         <div class="text-center mb-16">
             <h2 class="text-pink-600 font-medium tracking-widest mb-2 uppercase">My Work</h2>
-            <h3 class="text-4xl font-bold text-gray-900 font-serif">Featured Projects</h3>
+            <h3 class="text-4xl font-bold text-gray-900 font-display">Featured Projects</h3>
             <div class="w-24 h-1 bg-pink-300 mx-auto mt-4 rounded-full"></div>
         </div>
 
@@ -65,7 +65,7 @@
                     <div class="p-8 md:p-12 space-y-6">
                         <div class="flex flex-col items-start md:flex-row md:items-start md:justify-between gap-4">
                             <div>
-                                <h4 class="text-3xl font-bold text-gray-900 font-serif mb-2">{project.title}</h4>
+                                <h4 class="text-3xl font-bold text-gray-900 font-display mb-2">{project.title}</h4>
                                 <p class="text-pink-600 font-medium text-lg">{project.role}</p>
                             </div>
                             {#if project.link}
