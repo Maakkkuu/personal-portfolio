@@ -30,7 +30,7 @@
 </script>
 
 <nav class={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'}`}>
-    <div class="container mx-auto px-6 flex justify-between items-center">
+    <div class="w-full px-6 md:px-10 flex justify-between items-center">
         <a href="#home" class="block h-12 w-auto">
             <img src={logo} alt="Makku Logo" class="h-full w-auto object-contain" />
         </a>
