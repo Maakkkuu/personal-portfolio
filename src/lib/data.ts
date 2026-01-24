@@ -11,7 +11,9 @@ import cafe1 from '$lib/assets/img/cafecraze_1.png';
 import cafe2 from '$lib/assets/img/cafecraze_2.png';
 
 import awsCcp from '$lib/assets/img/aws_ccp.png';
-import thm from '$lib/assets/img/advent_of_cyber.svg';
+import adventOfCyber2024 from '$lib/assets/img/advent_of_cyber_2024.png';
+// Add import for advent of cyber 2025 here when available
+import adventOfCyber2025 from '$lib/assets/img/advent_of_cyber_2025.png';
 import awsMl from '$lib/assets/img/aws_educate_machine_learning_foundations.png';
 import awsEss from '$lib/assets/img/aws_knowledge_cloud_essentials.png';
 
@@ -87,6 +89,13 @@ export const skills = [
 
 export const certifications = [
     {
+        title: "Advent of Cyber 2025",
+        issuer: "TryHackMe",
+        date: "December 27, 2025",
+        link: "https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-5YLQWMP8GN.pdf",
+        image: adventOfCyber2025
+    },
+    {
         title: "AWS Certified Cloud Practitioner",
         issuer: "Amazon Web Services",
         date: "May 21, 2025",
@@ -98,7 +107,7 @@ export const certifications = [
         issuer: "TryHackMe",
         date: "December 27, 2024",
         link: "https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-ZQDMJAKRWI.pdf",
-        image: thm
+        image: adventOfCyber2024
     },
     {
         title: "AWS Educate Machine Learning Foundations",
